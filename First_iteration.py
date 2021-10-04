@@ -140,7 +140,7 @@ def profile_data():
 def move_scroll_reply():
     replay_in_list = []
     while True:
-        time.sleep(4)
+        time.sleep(2)
         replay_in_list.append(post_replay_text_scrap())
         page_ht_bef = driver.execute_script("return document.body.scrollHeight")
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -225,7 +225,7 @@ def temp_a_list():
     try:
         time.sleep(3)
         posts_lead_links = driver.find_elements_by_xpath(
-            "(//a[@class='css-4rbku5 css-18t94o4 css-901oao r-9ilb82 r-1loqt21 r-1q142lx r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-3s2u2q r-qvutc0'])")
+            "(//a[@class='css-901oao r-1fmj7o5 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0'])")
         for links in posts_lead_links:
             posts_links.append(links.get_attribute('href'))
     except:
@@ -245,10 +245,21 @@ def post_text_scrap():
     return posts_lead
 
 
+# def post_replay_text_scrap():
+#     try:
+#         posts_lead_links = driver.find_element_by_tag_name("section").text.replace('\n', ' ')
+#     except:
+#         pass
+#     return posts_lead_links
+  
+  
 def post_replay_text_scrap():
     replay_list = []
     try:
-        replay_list = driver.find_element_by_tag_name("section").text.replace('\n', ' ')
+        posts_reply = driver.find_elements_by_xpath(
+            "(//div[@class='css-901oao r-1fmj7o5 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-bnwqim r-qvutc0'])")
+        for r in posts_reply:
+            replay_list.append(r.text.replace('\n', ' '))
     except:
         pass
     return replay_list
@@ -340,7 +351,6 @@ for i in listOfWords:
 
 df_primary_scrape = df_primary_scrape.applymap(lambda x: x.encode('unicode_escape').
                                                decode('utf-8') if isinstance(x, str) else x)
-
 
 Excel_convertor = pd.ExcelWriter(f'{int(time.time())}KeywordHits.xlsx')
 df_primary_scrape.to_excel(Excel_convertor, index=False)
