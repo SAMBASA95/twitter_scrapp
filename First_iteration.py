@@ -340,11 +340,12 @@ for i in listOfWords:
 
 df_primary_scrape = df_primary_scrape.applymap(lambda x: x.encode('unicode_escape').
                                                decode('utf-8') if isinstance(x, str) else x)
-#
-# Excel_convertor = pd.ExcelWriter(f'{int(time.time())}KeywordHits.xlsx')
-# df_primary_scrape.to_excel(Excel_convertor, index=False)
-# Excel_convertor.save()
-#
-# file_name = str(time.time())
-# df_primary_scrape.to_csv(f'{str(int(time.time()))}KeywordHits.csv')
+
+
+Excel_convertor = pd.ExcelWriter(f'{int(time.time())}KeywordHits.xlsx')
+df_primary_scrape.to_excel(Excel_convertor, index=False)
+Excel_convertor.save()
+
+file_name = str(time.time())
+df_primary_scrape.to_csv(f'{str(int(time.time()))}KeywordHits.csv')
 
