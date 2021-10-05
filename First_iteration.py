@@ -62,7 +62,7 @@ def i_flow_login():
                 "r-poiln3 r-7cikom r-1ny4l3l r-t60dpp r-1dz5y72 r-fdjqy7 r-13qz1uu'])")
             username.click()
             time.sleep(5)
-            username.send_keys('swapnilukey2251995@gmail.com')
+            username.send_keys('')
             username.send_keys(Keys.ENTER)
 
         if 'There was unusual login activity' in check:
@@ -71,7 +71,7 @@ def i_flow_login():
                 "r-poiln3 r-7cikom r-1ny4l3l r-t60dpp r-1dz5y72 r-fdjqy7 r-13qz1uu'])")
             username.click()
             time.sleep(5)
-            username.send_keys('itsswaky')
+            username.send_keys('')
             username.send_keys(Keys.ENTER)
 
         if 'Enter your password' in check:
@@ -79,7 +79,7 @@ def i_flow_login():
                 "(//input[@class='r-30o5oe r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj "
                 "r-poiln3 r-7cikom r-1ny4l3l r-t60dpp r-1dz5y72 r-fdjqy7 r-13qz1uu'])")
             password.clear()
-            password.send_keys('Sw@pnil2251995')
+            password.send_keys('')
             time.sleep(5)
             password.send_keys(Keys.ENTER)
             time.sleep(5)
@@ -95,11 +95,9 @@ def login():
 
     # enter username and password
     username.clear()
-    username.send_keys('swapnilukey.sss@gmail.com')
+    username.send_keys('')
     password.clear()
-    password.send_keys('r(<#q#/TAT4*NsC')
-    # r(<#q#/TAT4*NsC       swapnilukey.sss@gmail.com       @SwapnilUkey16
-    # SwapnilUkey13       WysGz9uNXeJDema
+    password.send_keys('')
     time.sleep(5)
     password.send_keys(Keys.ENTER)
 
