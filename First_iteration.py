@@ -14,27 +14,8 @@ ex_df = main_df[['NAME', 'Twitter']]
 ex_df = ex_df.dropna(subset=['Twitter', 'NAME'])
 # ex_df = ex_df.head(2)
 
-listOfWords = ["Synopsis", "Vegan/plant based athlete", "Improved athletic performance",
-               "Dairy and link to hormonal cancers", "environmental impact of diet",
-               "dairy industry influence/marketing", "Switch for good", "Dairy-free", "dairyfree", "vegan",
-               "plant-based", "non-dairy", "vegan athletes", "plant-based athletes", "lactose intolerance",
-               "dairy sensitivity", "food sensitivity", "athlete nutrition", "Dotsie Bausch", "vegan Olympians",
-               "vegan cheese", "nondairy milk", "inflammation", "workout recovery", "exercise recovery", "dairy-free",
-               "how to go dairy-free", "dairy-free alternatives", "oat milk", "lactose intolerance",
-               "am I lactose intolerant?", "will going plant-based help me lose weight?", "do I need more calcium?",
-               "vegan athlete", "am I allergic to dairy", "best plant-based cheeses", "dairy vs soy",
-               "dairy-free recipes", "dairy-free meal plan", "Dairy cows suffering", "plant milk protein",
-               "best protein to build muscle", "Vegan diet deficiencies", "Where do we get B12",
-               "Difference between dairy allergy and lactose intolerance", "Vegan athletes didn't start vegan",
-               "Is milk or meat worse for you", "Do vegans need to take many supplements",
-               "What is ethically sourced meat/dairy", "Eating meat and climate change", "What foods can I grow myself",
-               "Side effects of going vegan", "Is vegan high carb", "Dairy-free nutrition", "Dairy-free recipes",
-               "Dairy alternatives", "Cows milk alternatives", "Dairy pros and cons", "Non-dairy foods",
-               "Dairy is bad for you", "Side-effects of milk", "Dairy health risk", "Dairy and health", "Ditch dairy",
-               "Plant-based", "Healthy food", "Athletic performance", "No whey", "Dairy causes inflammation",
-               "Inflammatory markers", "Dietary racism", "Improve health", "Improve the world", "Dairy-free athlete",
-               "Dairy-free Olympian", "Dairy-free products", "Dairy-free companies", "Dairy allergies",
-               "Milk allergies", "Dairy avoidance", "Milk avoidance"]
+listOfWords = ["Milk allergies", "Dairy avoidance", "Milk avoidance"]
+# Lsit of Words
 
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications": 2}
